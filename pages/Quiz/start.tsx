@@ -1,10 +1,12 @@
 import React from 'react'
 
-function Quiz() {
+
+function Start() {
   return (
   <>
+  
   </>
   )
 }
 
-export default Quiz
+export default Start;

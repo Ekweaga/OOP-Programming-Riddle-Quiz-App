@@ -1,4 +1,9 @@
 import { useEffect } from "react";
+import { Quizmodel } from "../models";
+import { MathQuestions } from "../public/Data";
+import { EnglishQuestions } from "../public/Data";
+import { ScienceQuestions } from "../public/Data";
+import { generalQuestions } from "../public/Data";
 
 
 export class AuthService {
@@ -14,25 +19,35 @@ export class AuthService {
 }
 
 
-export class QuizInfo {
 
-     public time:number = 1200
-    isLow : any;
-    isHigh:any;
-    completed :boolean = false;
-  name:any;
-  disable= false;
-  public questionsList:any = []
-  points = 0;
-  currentNumber : number = 0;
-  counter = 60;
-  correctAns = 0 ;
-  wrongAns = 0;
-  progress : string = "0"
+export class QuizEnglish{
+  questions = EnglishQuestions;
+  static scoreCount = 0;
+  currentIndex = 0
 
   constructor(){
-    
+
   }
+
+  static nextQuestions(){
+
+  }
+
+  
+
+}
+
+export class QuizMath{
+
+}
+
+export class QuizGeneral{
+
+}
+
+
+export class Timer{
+
 }
 
 

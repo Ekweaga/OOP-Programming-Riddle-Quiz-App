@@ -1,28 +1,27 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Signup from '../views/Signup'
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 export default function Home() {
 
-  const howToPlay = [
+  const blogs = [
     {
-    title:"Step 1",
-    desc:"Enter your email and password",
-    icon:"/step1.png",
-    top:"70px"
+  
+    desc:"Even the all-powerful pointing has no control about",
+    icon:"/unsplash_hpjSkU2UYSU.png",
+  
   },
   {
-    title:"Step 2",
-    desc:"Verify your email address",
-    icon:"/step2.png",
-    top:"30px"
+    desc:"Almost unorthographic life on earth however small one",
+    icon:"/unsplash_SYTO3xs06fU.png",
+   
   },
   {
-    title:"Step 3",
-    desc:"Enter your info and start quiz",
-    icon:"/step3.png"
+   
+    desc:"Even the all-powerful pointing has no control about",
+    icon:"/unsplash_vh3IjuOIwlU.png"
   },
 
 ]
@@ -67,7 +66,7 @@ export default function Home() {
     <div className="mt-[30px]"
         >
           <h4 className='font-bold mb-[15px] text-[#1D4645]'>Step 1</h4>
-          <p>Click on the subject</p>
+          <p>Enter email and password to register</p>
         </div>
     </div>
 
@@ -77,7 +76,7 @@ export default function Home() {
     <div className="mt-[30px]"
         >
           <h4 className='font-bold mb-[15px] text-[#1D4645]'>Step 2</h4>
-          <p>Click on the subject</p>
+          <p>Verify your email address</p>
         </div>
     </div>
 
@@ -87,7 +86,7 @@ export default function Home() {
     <div className="mt-[30px]"
         >
           <h4 className='font-bold mb-[15px] text-[#1D4645]'>Step 3</h4>
-          <p>Click on the subject</p>
+          <p>Enter your info to play quiz</p>
         </div>
     </div>
 
@@ -114,7 +113,7 @@ export default function Home() {
     <div className="mt-[30px]"
         >
           <h4 className='font-bold mb-[15px] text-[#1D4645]'>Step 4</h4>
-          <p>Click on the subject</p>
+          <p>A question will have four options</p>
         </div>
     </div>
 
@@ -124,7 +123,7 @@ export default function Home() {
     <div className="mt-[30px]"
         >
           <h4 className='font-bold mb-[15px] text-[#1D4645]'>Step 4</h4>
-          <p>Click on the subject</p>
+          <p>Click on the right option</p>
         </div>
     </div>
 
@@ -147,7 +146,11 @@ export default function Home() {
 
   <div >
     <div className='flex'>
-        <div className="bg-[#1D4645] w-[350px] h-[350px] text-white">
+        <div className="bg-[#1D4645] w-[350px] h-[350px] text-white flex flex-col items-center p-4 justify-center gap-[15px]">
+          <h1 className="text-2xl font-bold">Baj Model Test</h1>
+          <p className='text-sm text-center'>Quiz baj test comes with three different categories(Maths,English and General knowledge) each tests contains 10 questions. One questions attract two marks each i.e 
+            total of 20 marks per category
+          </p>
 
         </div>
         <Image src="/Rectangle 3.svg" width={300} height={100} alt="icon"/>
@@ -157,16 +160,20 @@ export default function Home() {
         </div>
     </div>
 
-    <div  className='flex'>
-    <div className="bg-[#1D4645] w-[350px] h-[350px] text-white">
+    <div  className='flex gap-[20px]'>
+    <div className="bg-[#1D4645] w-[350px] h-[350px] text-white flex flex-col items-center justify-center shadow-lg">
+    <Image src="/p.png" width={150} height={100} alt="icon"/>
+        <h1 className="font-bold text-2xl ">Bank Exam</h1>
 
 </div>
 
 <div className="bg-[#FFF2E6] w-[350px] h-[350px] shadow-lg flex flex-col items-center justify-center">
         <Image src="/Bitmap (1).png" width={150} height={100} alt="icon"/>
-        <h1 className="font-bold text-2xl ">Primary Exam</h1>
+        <h1 className="font-bold text-2xl ">Railway Exam</h1>
         </div>
-        <div className="bg-[#1D4645] w-[350px] h-[350px] text-white">
+        <div className="bg-[#1D4645] w-[350px] h-[350px] text-white flex flex-col items-center justify-center shadow-lg">
+        <Image src="/3.png" width={150} height={100} alt="icon"/>
+        <h1 className="font-bold text-2xl ">Bank Exam</h1>
 
 </div>
 
@@ -178,15 +185,140 @@ export default function Home() {
 
 
 
+<div className='explore w-[70%] mx-auto mt-[100px]'>
+<div className="flex justify-between mb-[30px]">
+    <h2 className='font-bold text-3xl text-[#1D4645]'>Explore Our Quiz <br/>Categories</h2>
+    <div><button className='border-[1px] border-[#1D4645] p-2 text-[#1D4645] rounded-md'>EXPLORE ALL</button></div>
+  </div>
+
+  <div className='flex gap-[20px]'>
+    <div className='w-[300px] h-[250px] bg-[#FFF2E6] p-4'>
+      <div className='bg-white rounded-full w-[50px] p-4 mb-[30px]'>
+      <Image src="/Oval.png" width={100} height={100} alt="icon"/>
+      </div>
+   
+        <h1 className="font-bold text-sm mb-[20px]">Math</h1>
+        <p className='text-sm'>Sky was cloudless and of a deep dark blue spectacle before us was indeed</p>
+    </div>
+    <div className='w-[250px] h-[200px] bg-[#FFF2E6] mt-[140px] p-4'>
+
+    <div className='bg-white rounded-full w-[50px] p-4 mb-[20px]'>
+      <Image src="/Oval (1).png" width={100} height={100} alt="icon"/>
+      </div>
+   
+        <h1 className="font-bold text-sm mb-[20px]">English</h1>
+        <p className='text-sm '>Sky was cloudless and of a deep dark blue spectacle before us was indeed</p>
+
+</div>
+  </div>
+
+  <div className='ml-[100px] flex gap-[20px]'>
+  <div className='w-[200px] h-[250px] bg-white shadow-lg -mt-[60px] p-4 rounded-md'>
+
+<div className='bg-white rounded-full w-[50px] p-4 mb-[20px]'>
+  <Image src="/Oval (1).png" width={100} height={100} alt="icon"/>
+  </div>
+
+    <h1 className="font-bold text-sm mb-[20px]">Science</h1>
+    <p className='text-sm '>Sky was cloudless and of a deep dark blue spectacle before us was indeed</p>
+
+</div>
+
+
+<div className='w-[200px] h-[250px] bg-[#FFF2E6] mt-[40px] p-4 rounded-md'>
+
+<div className='bg-white rounded-full w-[50px] p-4 mb-[20px]'>
+  <Image src="/Oval (1).png" width={100} height={100} alt="icon"/>
+  </div>
+
+    <h1 className="font-bold text-sm mb-[20px]">Bangla</h1>
+    <p className='text-sm '>Sky was cloudless and of a deep dark blue spectacle before us was indeed</p>
+
+</div>
 
 
 
+<div className='w-[300px] h-[250px] bg-white shadow-lg mt-[90px] p-4 rounded-md'>
 
+<div className='bg-white rounded-full w-[50px] p-4 mb-[20px]'>
+  <Image src="/Oval (1).png" width={100} height={100} alt="icon"/>
+  </div>
 
+    <h1 className="font-bold text-sm mb-[20px]">General Knowledge</h1>
+    <p className='text-sm '>Sky was cloudless and of a deep dark blue spectacle before us was indeed</p>
 
-  <div className="bg-[#1D4645] h-[500px] mt-[100px]">
+</div>
 
   </div>
+</div>
+
+
+
+
+
+  <div className="bg-[#1D4645] p-4 mt-[100px] z-1 text-white relative">
+    <div className="absolute top-0 bottom-0 left-0 right-0">
+      <Image src="/Group 331.png" width={2200} height={300} alt="icon"/>
+
+    </div>
+
+    <div className='mt-[100px] p-4'>
+      <div className='flex justify-between w-[70%] mx-auto mt-[10px]'>
+        <div>
+        <div className='border-[1px] border-white rounded-md w-[120px] p-2 h-[30px] mb-[20px]'></div>
+        <h1 className='font-bold text-5xl'>Winner<br/> player</h1>
+        <p className='w-[350px] leading-[30px] text-sm mt-[30px]'>Quiz baj test comes with three different categories(Maths,English and General knowledge) each tests contains 10 questions. One questions attract</p>
+        </div>
+
+        <div>
+          <div className='flex'>
+            <div className='bg-[#0C2323] w-[200px] h-[150px] text-white flex flex-col items-center justify-center'>
+              <h2 className='text-5xl font-bold'>Weekly</h2><p>Winner</p>
+            </div>
+            <Image src="/unsplash_3JmfENcL24M.png" width={300} height={200} alt="icon"/>
+          </div>
+          <div className='flex'>
+          <Image src="/unsplash_GRyMXAQdtp8.png" width={300} height={200} alt="icon"/>
+          <div className='bg-[#0C2323] w-[200px] h-[150px] text-white flex flex-col items-center justify-center p-4'>
+              <h2 className='text-4xl font-bold'>Monthly</h2><p>Winner</p>
+            </div>
+          
+          </div>
+        </div>
+        
+      </div>
+
+
+
+      <div className='blog w-[70%] mx-auto mt-[10px]'>
+        <div>
+        <div>
+       
+        <h1 className='font-bold text-4xl'>Check Latest<br/> Articles</h1>
+   
+        </div>
+        </div>
+
+        <div className="grid grid-cols-3 gap-[20px] mt-[20px]">
+          {
+            blogs.map((blog:any,index:number)=>{
+                return (
+                  <div key={index}>
+                    <Image src={blog.icon} width={250} height={200} alt="icon"/>
+                    <div><h2 className="font-bold text-sm mt-[20px]">{blog.desc}</h2></div>
+                  </div>
+                )
+            })
+          }
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <Footer/>
 
     
     </>

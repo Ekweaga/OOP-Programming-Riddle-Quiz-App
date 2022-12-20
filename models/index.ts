@@ -1,5 +1,6 @@
 export interface Quizmodel{
-    title:string,
-    options:string,
+   prompt:string,
+   options:string[],
+   answer:string
     
 }
