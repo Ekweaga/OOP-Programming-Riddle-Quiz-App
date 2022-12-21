@@ -20,8 +20,10 @@ export const QuizAppProvider = ({children})=>{
     const [eng,setEng] = useState("");
     const [math,setMath] = useState("")
     const [quizstate,setQuizState] = useState("")
+    const [color,setColor] = useState("")
+    const [state,setState] = useState("")
 
-    return (  <QuizApp.Provider value={{quizstate,setQuizState}}>
+    return (  <QuizApp.Provider value={{quizstate,setQuizState,state,setState}}>
         {children}
         </QuizApp.Provider>)
 }

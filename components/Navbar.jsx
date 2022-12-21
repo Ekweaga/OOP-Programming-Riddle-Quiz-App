@@ -5,13 +5,13 @@ function Navbar() {
   return (
   <>
 
-  <nav className='flex justify-between p-4 items-center'>
+  <nav className='flex justify-between md:p-2 items-center '>
     <Image src="/Group 1 1.png" width={80} height={100}/>
 
-    <div>
-        <ul>
-            <button>Sign In</button>
-            <button>Sign Up</button>
+    <div className='p-2 block'>
+        <ul className='flex gap-[10px]'>
+            <button className='w-[100px] bg-[#1D4645] p-2 text-white'>Sign In</button>
+            <button className='w-[100px]  border-[#1D4645] p-2 '>Sign Up</button>
             
         </ul>
     </div>

@@ -33,10 +33,10 @@ export default function Home() {
     <Navbar/>
 
 <header>
-  <div className='flex gap-[0px] justify-around p-[30px] '>
+  <div className='flex gap-[0px] md:justify-around p-[30px] flex-col md:flex-row items-center justify-center'>
 
-  <div className='mt-[100px] ml-[150px]'>
-    <h1 className="text-[#1D4645] font-bold text-5xl w-[350px] leading-[60px]">Play Online Quiz & Win Cash Daily!</h1>
+  <div className='md:mt-[100px] md:ml-[150px] mt-[50px]'>
+    <h1 className="text-[#1D4645] font-bold text-5xl md:w-[350px] leading-[60px]">Play Online Quiz & Win Cash Daily!</h1>
     <p className='text-sm mt-[20px]'>Win up to 1000 monthly from QuizBaj </p>
     <div className='mt-[20px] flex gap-[20px] '>
     <button className='bg-[#1D4645] text-sm p-2 w-[150px] text-white '>SIGN IN</button>
@@ -47,7 +47,7 @@ export default function Home() {
     </div>
   </div>
   <div>
-    <Image src="/Group 338.png" width={700} height={300} alt="icon"/>
+    <Image src="/Group 338.png" width={800} height={300} alt="icon" className='-ml-[50px] md:ml-0'/>
   </div>
 
   </div>
@@ -57,10 +57,10 @@ export default function Home() {
 <div className="howToPlay">
 <div className='bg-[#1D4645]  text-white p-[30px] flex flex-col'>
   <h1 className='text-left font-bold text-3xl mb-[30px]'>How To Play</h1>
-  <div className="flex items-center justify-center">
+  <div className="flex items-center justify-center ">
 
 
-  <div className='grid grid-cols-3 gap-[20px] mt-[0px]'>
+  <div className='grid grid-cols-1 md:grid-cols-3 gap-[20px] mt-[0px]'>
   <div   className='bg-white w-[300px] h-[300px] rounded-md p-4 shadow-2xl text-black mt-[120px]'>
     <Image src="/step1.png" width={240} height={50} alt="icon"/>
     <div className="mt-[30px]"
@@ -97,7 +97,7 @@ export default function Home() {
 
 
 <div className="flex items-center justify-center">
-  <div className='grid grid-cols-3 gap-[20px] mt-[50px]'>
+  <div className='grid grid-cols-1 md:grid-cols-3 gap-[20px] mt-[50px]'>
     <div   className='bg-white w-[300px] h-[300px] rounded-md p-4 shadow-2xl text-black mt-[80px]'>
     <Image src="/step4.png" width={240} height={50} alt="icon"/>
     <div className="mt-[30px]"
@@ -138,14 +138,14 @@ export default function Home() {
 </div>
 
 
-<div className="mt-[100px] w-[70%] mx-auto">
-  <div className="flex justify-between mb-[30px]">
+<div className="mt-[100px] md:w-[70%] mx-auto w-[100%] ">
+  <div className="flex justify-between mb-[30px] flex-col md:flex-row gap-[15px] p-3 ">
     <h2 className='font-bold text-3xl text-[#1D4645]'>Let's Sharp Your <br/>Preparation</h2>
     <div><button className='border-[1px] border-[#1D4645] p-2 text-[#1D4645] rounded-md'>EXPLORE ALL</button></div>
   </div>
 
   <div >
-    <div className='flex'>
+    <div className='flex flex-col md:flex-row items-center justify-center'>
         <div className="bg-[#1D4645] w-[350px] h-[350px] text-white flex flex-col items-center p-4 justify-center gap-[15px]">
           <h1 className="text-2xl font-bold">Baj Model Test</h1>
           <p className='text-sm text-center'>Quiz baj test comes with three different categories(Maths,English and General knowledge) each tests contains 10 questions. One questions attract two marks each i.e 
@@ -154,13 +154,13 @@ export default function Home() {
 
         </div>
         <Image src="/Rectangle 3.svg" width={300} height={100} alt="icon"/>
-        <div className="bg-[#FFF2E6] w-[350px] h-[350px] ml-[40px] shadow-lg flex flex-col items-center justify-center">
+        <div className="bg-[#FFF2E6] w-[350px] h-[350px] md:ml-[40px] shadow-lg flex flex-col items-center justify-center">
         <Image src="/Bitmap.svg" width={150} height={100} alt="icon"/>
         <h1 className="font-bold text-2xl ">Primary Exam</h1>
         </div>
     </div>
 
-    <div  className='flex gap-[20px]'>
+    <div  className='flex gap-[20px] flex-col md:flex-row items-center justify-center'>
     <div className="bg-[#1D4645] w-[350px] h-[350px] text-white flex flex-col items-center justify-center shadow-lg">
     <Image src="/p.png" width={150} height={100} alt="icon"/>
         <h1 className="font-bold text-2xl ">Bank Exam</h1>
@@ -185,13 +185,13 @@ export default function Home() {
 
 
 
-<div className='explore w-[70%] mx-auto mt-[100px]'>
-<div className="flex justify-between mb-[30px]">
+<div className='explore md:w-[70%] mx-auto mt-[100px] w-[80%]'>
+<div className="flex justify-between mb-[30px] flex-col md:flex-row  gap-[10px]">
     <h2 className='font-bold text-3xl text-[#1D4645]'>Explore Our Quiz <br/>Categories</h2>
     <div><button className='border-[1px] border-[#1D4645] p-2 text-[#1D4645] rounded-md'>EXPLORE ALL</button></div>
   </div>
 
-  <div className='flex gap-[20px]'>
+  <div className='flex gap-[20px] flex-col md:flex-row'>
     <div className='w-[300px] h-[250px] bg-[#FFF2E6] p-4'>
       <div className='bg-white rounded-full w-[50px] p-4 mb-[30px]'>
       <Image src="/Oval.png" width={100} height={100} alt="icon"/>
@@ -200,7 +200,7 @@ export default function Home() {
         <h1 className="font-bold text-sm mb-[20px]">Math</h1>
         <p className='text-sm'>Sky was cloudless and of a deep dark blue spectacle before us was indeed</p>
     </div>
-    <div className='w-[250px] h-[200px] bg-[#FFF2E6] mt-[140px] p-4'>
+    <div className='md:w-[250px] md:h-[200px] bg-[#FFF2E6] md:mt-[140px] p-4 h-[250px]'>
 
     <div className='bg-white rounded-full w-[50px] p-4 mb-[20px]'>
       <Image src="/Oval (1).png" width={100} height={100} alt="icon"/>
@@ -212,8 +212,8 @@ export default function Home() {
 </div>
   </div>
 
-  <div className='ml-[100px] flex gap-[20px]'>
-  <div className='w-[200px] h-[250px] bg-white shadow-lg -mt-[60px] p-4 rounded-md'>
+  <div className='md:ml-[100px] flex gap-[20px] flex-col md:flex-row'>
+  <div className='md:w-[200px] h-[250px] bg-white shadow-lg md:-mt-[60px] p-4 rounded-md mt-[15px]'>
 
 <div className='bg-white rounded-full w-[50px] p-4 mb-[20px]'>
   <Image src="/Oval (1).png" width={100} height={100} alt="icon"/>
@@ -225,7 +225,7 @@ export default function Home() {
 </div>
 
 
-<div className='w-[200px] h-[250px] bg-[#FFF2E6] mt-[40px] p-4 rounded-md'>
+<div className='md:w-[200px] h-[250px] bg-[#FFF2E6] mt-[40px] p-4 rounded-md'>
 
 <div className='bg-white rounded-full w-[50px] p-4 mb-[20px]'>
   <Image src="/Oval (1).png" width={100} height={100} alt="icon"/>
@@ -263,11 +263,11 @@ export default function Home() {
     </div>
 
     <div className='mt-[100px] p-4'>
-      <div className='flex justify-between w-[70%] mx-auto mt-[10px]'>
+      <div className='flex justify-between md:w-[70%] mx-auto mt-[10px] flex-col md:flex-row'>
         <div>
         <div className='border-[1px] border-white rounded-md w-[120px] p-2 h-[30px] mb-[20px]'></div>
         <h1 className='font-bold text-5xl'>Winner<br/> player</h1>
-        <p className='w-[350px] leading-[30px] text-sm mt-[30px]'>Quiz baj test comes with three different categories(Maths,English and General knowledge) each tests contains 10 questions. One questions attract</p>
+        <p className='md:w-[350px] leading-[30px] text-sm mt-[30px]'>Quiz baj test comes with three different categories(Maths,English and General knowledge) each tests contains 10 questions. One questions attract</p>
         </div>
 
         <div>
@@ -277,7 +277,7 @@ export default function Home() {
             </div>
             <Image src="/unsplash_3JmfENcL24M.png" width={300} height={200} alt="icon"/>
           </div>
-          <div className='flex'>
+          <div className='flex '>
           <Image src="/unsplash_GRyMXAQdtp8.png" width={300} height={200} alt="icon"/>
           <div className='bg-[#0C2323] w-[200px] h-[150px] text-white flex flex-col items-center justify-center p-4'>
               <h2 className='text-4xl font-bold'>Monthly</h2><p>Winner</p>
@@ -290,7 +290,7 @@ export default function Home() {
 
 
 
-      <div className='blog w-[70%] mx-auto mt-[10px]'>
+      <div className='blog md:w-[70%] mx-auto mt-[10px]'>
         <div>
         <div>
        
@@ -299,7 +299,7 @@ export default function Home() {
         </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-[20px] mt-[20px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px] mt-[20px]">
           {
             blogs.map((blog:any,index:number)=>{
                 return (

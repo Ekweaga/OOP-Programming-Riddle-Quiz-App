@@ -21,17 +21,25 @@ export class AuthService {
 
 
 export class QuizEnglish{
-  questions = EnglishQuestions;
-  static scoreCount = 0;
-  currentIndex = 0
-
+   questions;
+   scoreCount =0;
+   currentIndex = 0;
+ 
   constructor(){
+    this.questions  = EnglishQuestions;
+   
+  }
+ 
+nextQuestions = () => {
+     this.currentIndex++;
+     console.log(this.currentIndex)
+    
+ 
 
   }
 
-  static nextQuestions(){
 
-  }
+
 
   
 
