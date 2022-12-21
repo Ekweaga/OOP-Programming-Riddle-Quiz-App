@@ -56,7 +56,7 @@ export default function Home() {
 
 <div className="howToPlay">
 <div className='bg-[#1D4645]  text-white p-[30px] flex flex-col'>
-  <h1 className='text-left font-bold text-3xl mb-[30px]'>How To Play</h1>
+  <h1 className='text-left font-bold text-3xl md:mb-[10px] md:ml-[40px] '>How To Play</h1>
   <div className="flex items-center justify-center ">
 
 

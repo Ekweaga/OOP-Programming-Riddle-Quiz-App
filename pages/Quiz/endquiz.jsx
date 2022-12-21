@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { QuizApp } from '../../services/context'
+
 
 function EndQuiz() {
+  const {totalscore} = useContext(QuizApp)
   return (
-    <div>E</div>
+    <div>{totalscore}</div>
   )
 }
 

@@ -21,18 +21,28 @@ export class AuthService {
 
 
 export class QuizEnglish{
-   questions;
-   scoreCount =0;
-   currentIndex = 0;
+  questions:Array<Quizmodel>;
+  scoreCount;
+  currentIndex = 0 ;
+  showres:boolean;
  
   constructor(){
     this.questions  = EnglishQuestions;
+    this.scoreCount =0;
+    this.showres = false;
+  
+  
    
   }
  
 nextQuestions = () => {
-     this.currentIndex++;
-     console.log(this.currentIndex)
+
+  
+
+  
+    this.currentIndex++;
+   
+    
     
  
 
@@ -47,9 +57,64 @@ nextQuestions = () => {
 
 export class QuizMath{
 
+  questions:Array<Quizmodel>;
+  scoreCount;
+  currentIndex = 0 ;
+  showres:boolean;
+ 
+  constructor(){
+    this.questions  = MathQuestions;
+    this.scoreCount =0;
+    this.showres = false;
+  
+  
+   
+  }
+ 
+nextQuestions = () => {
+
+  
+
+  
+    this.currentIndex++;
+   
+    
+    
+ 
+
+  }
+
+
 }
 
 export class QuizGeneral{
+
+  questions:Array<Quizmodel>;
+  scoreCount;
+  currentIndex = 0 ;
+  showres:boolean;
+ 
+  constructor(){
+    this.questions  = generalQuestions;
+    this.scoreCount =0;
+    this.showres = false;
+  
+  
+   
+  }
+ 
+nextQuestions = () => {
+
+  
+
+  
+    this.currentIndex++;
+   
+    
+    
+ 
+
+  }
 
 }
 
