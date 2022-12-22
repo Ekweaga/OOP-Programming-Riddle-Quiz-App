@@ -20,10 +20,10 @@ function Login() {
         <div>
         <button className="bg-[#E8C5B0] text-black w-[280px] rounded-full p-2">Get Started</button>
         </div>
-        <div>
+        <div className="text-white text-sm">
           <p>Dont have an account ? <Link href="/views/Signup" className='text-[#14f2fe] font-bold'>SignUp</Link></p>
         </div>
-        <div>
+        <div className="text-white text-sm">
           <p><Link href="/">Go back home</Link></p>
         </div>
       </form>

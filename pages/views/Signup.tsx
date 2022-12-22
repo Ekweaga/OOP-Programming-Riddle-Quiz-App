@@ -35,11 +35,11 @@ function SignUp() {
          <div>
          <button className="bg-[#E8C5B0] text-black w-[280px] rounded-full p-2 font-bold">Submit</button>
          </div>
-         <div>
+         <div className="text-white text-sm">
            <p>Already have an account ? <Link href="/views/Login"  className='text-[#14f2fe] font-bold'>Login</Link></p>
          </div>
          <div>
-           <p><Link href="/">Go back home</Link></p>
+           <p><Link href="/" className="text-white text-sm">Go back home</Link></p>
          </div>
        </form>
  

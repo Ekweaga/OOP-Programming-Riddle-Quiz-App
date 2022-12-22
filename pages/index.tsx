@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Link from "next/link"
 
 export default function Home() {
 
@@ -39,8 +40,8 @@ export default function Home() {
     <h1 className="text-[#1D4645] font-bold text-5xl md:w-[350px] leading-[60px]">Play Online Quiz & Win Cash Daily!</h1>
     <p className='text-sm mt-[20px]'>Win up to 1000 monthly from QuizBaj </p>
     <div className='mt-[20px] flex gap-[20px] '>
-    <button className='bg-[#1D4645] text-sm p-2 w-[150px] text-white '>SIGN IN</button>
-            <button className='bg-[#E8C5B0] p-2 text-[#1D4645] text-sm '>REGISTER NOW</button>
+  
+   <Link href="/Quiz/baj/category"><button className='bg-[#E8C5B0] p-2 text-[#1D4645] text-sm w-[150px]'>START QUIZ</button></Link> 
     </div>
     <div className="flex flex-col mt-[25px]"><h2>NUMBERS OF ACTIVE USES RIGHT NOW</h2>
     <h4 className='text-center text-3xl font-bold text-[#1D4645]'>20,000+</h4>
@@ -148,7 +149,7 @@ export default function Home() {
     <div className='flex flex-col md:flex-row items-center justify-center'>
         <div className="bg-[#1D4645] w-[350px] h-[350px] text-white flex flex-col items-center p-4 justify-center gap-[15px]">
           <h1 className="text-2xl font-bold">Baj Model Test</h1>
-          <p className='text-sm text-center'>Quiz baj test comes with three different categories(Maths,English and General knowledge) each tests contains 10 questions. One questions attract two marks each i.e 
+          <p className='text-sm text-center'>Quiz baj test comes with three different categories(Maths,English and General knowledge) each tests contains 5 questions. One questions attract 4 marks each i.e 
             total of 20 marks per category
           </p>
 

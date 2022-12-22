@@ -124,36 +124,43 @@ export class Timer{
 }
 
 
-export class UserData {
+export class QuizScience {
 
-  constructor(){}
-
- async fetchUserData(){
-
-
-  }
-
-
-}
-
-
-
-class AuthState {
-  user={}
-
+  questions:Array<Quizmodel>;
+  scoreCount;
+  currentIndex = 0 ;
+  showres:boolean;
+ 
   constructor(){
-useEffect(()=>{
+    this.questions  = ScienceQuestions;
+    this.scoreCount =0;
+    this.showres = false;
+  
+  
+   
+  }
+ 
+nextQuestions = () => {
 
+  
 
-},[])
+  
+    this.currentIndex++;
+   
+    
+    
+ 
+
   }
 
 }
 
 
-export class UI{
-  constructor(){
+export const  UserData = {}
 
-  }
-}
+
+
+
+
+
 
