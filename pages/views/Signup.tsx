@@ -1,6 +1,14 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import Link from "next/link"
 import Image from "next/image"
+import { getStorage, ref, getDownloadURL, deleteObject, uploadBytesResumable } from "firebase/storage";
+import {getFirestore} from "firebase/firestore"
+import {getAuth} from  "firebase/auth";
+import {setDoc,doc} from "firebase/firestore"
+import {firebaseapp} from "../../services/firebase"
+import { AuthUser } from '../../services/context';
+import {useRouter} from "next/router"
+import {createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider} from 'firebase/auth'
 
 function SignUp() {
     const [email,setEmail] = useState<string>("")
@@ -8,6 +16,97 @@ function SignUp() {
     const [password,setPassword] = useState<string>("")
     const [error, setError] = useState<string>("")
     const [file,setFile] = useState<any>()
+    const [loading,setLoading] = useState<boolean>(false)
+    const projectfirestore = getFirestore(firebaseapp)
+    const [progress,setProgress] = useState<any>(null)
+    const {user} = useContext(AuthUser)
+    const [url,setUrl] = useState<string>('')
+    const router = useRouter()
+
+    const [success,setSuccess] = useState<string>('')
+
+    const auth = getAuth(firebaseapp)
+
+    const projectstorage = getStorage(firebaseapp)
+
+    const  signupUser = async (e:any)=>{
+      e.preventDefault();
+     // setLoading(true)
+  
+      if(email === "" || password === "" || name === ""){
+        setError("Fields are empty")
+      
+    
+        //setLoading(false)
+      }
+      else if(password.length < 6){
+        setError("Password characters must be greater than 6")
+       // setLoading(false)
+      }
+     else{
+      try{
+         // setLoading(true)
+        await createUserWithEmailAndPassword(auth,email,password).then((response)=>{
+          console.log(response.user.refreshToken)
+        //  localStorage.setItem('token', JSON.stringify(response.user.refreshToken))
+        console.log(response)
+     setDoc(
+          doc(projectfirestore, "users",response.user.uid),{
+            Name:name,
+            Email:email,
+            id:response.user.uid,
+            userImage:url
+          });
+          
+        });
+      setDoc(doc(projectfirestore,'singleUser', `${email}`),{
+        saveUserInfo:{
+          name:name,
+          email:email,
+          imageUrl:url
+        }
+       })
+      
+     //  setLoading(false)
+       setSuccess("Your Account is created successfully")
+          setEmail('')
+          setPassword('')
+       setTimeout(()=>{
+       router.push('login')
+       },1000)
+     }
+     catch(err:any){
+     setError(err.message)
+     console.log(err)
+    // setLoading(false)
+     }
+     }
+  
+  }
+
+    const Upload = (e:any)=>{
+      setLoading(true);
+      const file = e.target.files[0]
+      const storageref = ref(projectstorage,`images/${user?.email}-${file.name}`);
+      const uploadTask = uploadBytesResumable(storageref, file);
+      
+      uploadTask.on("state_changed", (snapshot)=>{
+        const uploadprogress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        setProgress(uploadprogress)
+      },  (error) => {
+        // Handle unsuccessful uploads
+      }, 
+      () => {
+        // Handle successful uploads on complete
+        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          console.log('File available at', downloadURL);
+          setUrl(downloadURL)
+          setLoading(false)
+        });
+      }
+      )
+    }
   return (
     <>
     <div className='flex items-center justify-center '>
@@ -30,7 +129,8 @@ function SignUp() {
          </div>
 
          <div>
-          <input type="file"/>
+          <input type="file" id="file" className='hidden'/>
+          <label htmlFor="file" className='bg-black text-white p-2 -ml-[150px]'>Upload Photo</label>
          </div>
          <div>
          <button className="bg-[#E8C5B0] text-black w-[280px] rounded-full p-2 font-bold">Submit</button>

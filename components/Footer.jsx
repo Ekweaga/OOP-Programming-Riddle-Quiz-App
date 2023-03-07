@@ -5,17 +5,17 @@ function Footer() {
   return (
   <>
   <div>
-    <div className="bg-white h-[500px] relative z-[10px] ">
+    <div className="bg-white  relative -mb-[120px]" style={{zIndex:33}}>
     <div className="absolute top-0 bottom-0 left-0 right-0">
       <Image src="/Group 331.png" width={2200} height={300} alt="icon"/>
 
     </div>
 
-    <div className='flex flex-col items-center justify-center mt-[200px] z-5'>
+    <div className='flex flex-col items-center justify-center mt-[200px]' style={{zIndex:33}} >
       <h3>Contact Us</h3>
       <h1 className="text-3xl mt-[20px] font-bold text-[#1D4645]">Get In Touch</h1>
       <p className='text-center md:w-[450px] text-sm mt-[15px] p-2'>Write to us your messages and feedback. We really appreciate your comments and feedback</p>
-      <div className='h-[400px] w-[400px] shadow-2xl flex flex-col items-center justify-center gap-[20px] mt-[30px]' >
+      <div className='h-[400px] w-[400px] shadow-2xl flex flex-col items-center justify-center gap-[20px] mt-[30px]' style={{zIndex:33}} >
         <div>
           <label>Name</label><br/>
           <input type="text" className='border-[1px] border-[#ECECEC] w-[280px] h-[40px] px-2'/>
@@ -41,7 +41,7 @@ function Footer() {
 
 
 
-    <div className="bg-[#1D4645] p-4 text-white md:h-[630px] z-2">
+    <div className="bg-[#1D4645] p-4 text-white md:h-[630px] ">
 
       <div className='w-full h-full relative'>
       <div className="absolute top-0 bottom-0 left-0 right-0">

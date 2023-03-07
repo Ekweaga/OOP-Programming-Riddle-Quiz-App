@@ -28,7 +28,11 @@ export default function Home() {
 ]
   return (
     <>
-    <Head><title>Quizi Baj</title></Head>
+    <Head><title>Quizi Baj</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/Group 1 1.png" />
+        </Head>
+   
     
 
     <Navbar/>

@@ -1,14 +1,24 @@
 import { createContext,useState,useEffect } from "react";
-import {onAuthStateChanged} from "firebase/auth"
-import { create } from "domain";
+import { onAuthStateChanged ,getAuth} from "firebase/auth";
+import {firebaseapp} from "./firebase"
 
 export const AuthUser = createContext();
 
 export const QuizApp = createContext();
 
 export const AuthProvider = ({children})=>{
+    const [user,setUser] = useState({})
 
- return (  <AuthUser.Provider value={{quizstate,setQuizState}}>
+    const auth = getAuth(firebaseapp)
+
+    useEffect(()=>{
+        onAuthStateChanged(auth,(user)=>{
+               setUser(user)
+               
+           })
+       },[auth])
+
+ return (  <AuthUser.Provider value={{user}}>
     {children}
     </AuthUser.Provider>)
 }

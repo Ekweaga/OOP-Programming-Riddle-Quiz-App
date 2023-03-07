@@ -58,7 +58,7 @@ setqueItem(Math.questions[index])
      <>
     
     <div className='h-screen flex flex-col items-center justify-center  shadow-lg mt-[00px] '>
-    {showcolor ?<div className='flex items-center justify-center w-[200px] p-2'>{color === "green" ? <p className='bg-[green] text-white w-[200px] p-2'>Correct Answer</p>:<p className='bg-[red] text-white w-[300px] p-2'>Wrong Answer</p>}</div>:null}
+    {showcolor ?<div className='flex items-center justify-center w-[200px] p-2'>{color === "green" ? <p className='bg-[green] text-white w-[200px] p-2 text-center'>Correct Answer</p>:<p className='bg-[red] text-white w-[300px] p-2 text-center'>Wrong Answer</p>}</div>:null}
     <div className='flex flex-col items-center justify-center md:w-[600px] shadow-lg md:h-[500px] p-4'>
       <span className='mb-[20px] text-2xl font-extrabold text-[#1D4645]'>{index + 1}</span>
   {
