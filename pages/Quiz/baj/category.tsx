@@ -6,6 +6,8 @@ import { firebaseapp } from '../../../services/firebase'
 import {getFirestore} from "firebase/firestore"
 import Image from "next/image"
 
+import { useRouter } from 'next/router'
+
 
 function Category() {
   const {quizstate,setQuizState,state,setState} = useContext(QuizApp)
@@ -13,6 +15,7 @@ function Category() {
   const [userInfo,setUserInfo] = useState<any>({})
 
   const {user} = useContext(AuthUser)
+  const router = useRouter()
 
   const projectfirestore = getFirestore(firebaseapp)
 
@@ -58,6 +61,11 @@ await onSnapshot(doc(projectfirestore, "User", `${user?.email}`), (doc) => {
     useEffect(()=>{
       getUserInfo();
     },[user])
+
+    if(!user){
+      router.push("/views/Login")
+      return;
+    }
   return (
    <>
   
