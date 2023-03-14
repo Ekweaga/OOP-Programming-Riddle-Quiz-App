@@ -133,7 +133,7 @@ function SignUp() {
           <label htmlFor="file" className='bg-black text-white p-2 -ml-[150px]'>Upload Photo</label>
          </div>
          <div>
-         <button className="bg-[#E8C5B0] text-black w-[280px] rounded-full p-2 font-bold">Submit</button>
+         <button className="bg-[#E8C5B0] text-black w-[280px] rounded-full p-2 font-bold" onClick={signupUser}>Submit</button>
          </div>
          <div className="text-white text-sm">
            <p>Already have an account ? <Link href="/views/Login"  className='text-[#14f2fe] font-bold'>Login</Link></p>
