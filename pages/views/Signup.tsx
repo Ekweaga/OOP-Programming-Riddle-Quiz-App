@@ -129,7 +129,7 @@ function SignUp() {
          </div>
 
          <div>
-          <input type="file" id="file" className='hidden'/>
+          <input type="file" id="file" className='hidden' onChange={Upload}/>
           <label htmlFor="file" className='bg-black text-white p-2 -ml-[150px]'>Upload Photo</label>
          </div>
          <div>

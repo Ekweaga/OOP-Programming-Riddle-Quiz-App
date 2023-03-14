@@ -47,7 +47,11 @@ function Login() {
     try{
        // setLoading(true)
       await signInWithEmailAndPassword(auth,email,password).then((response)=>{
-        console.log(response.user.refreshToken)})}
+        console.log(response.user.refreshToken)})
+
+        router.push("/")
+      
+      }
         catch{
 
         }
