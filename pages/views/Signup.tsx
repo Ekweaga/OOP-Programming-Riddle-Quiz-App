@@ -72,7 +72,7 @@ function SignUp() {
           setEmail('')
           setPassword('')
        setTimeout(()=>{
-       router.push('login')
+       router.push('/views/Login')
        },1000)
      }
      catch(err:any){
