@@ -20,7 +20,7 @@ function SignUp() {
     const projectfirestore = getFirestore(firebaseapp)
     const [progress,setProgress] = useState<any>(null)
     const {user} = useContext(AuthUser)
-    const [url,setUrl] = useState<string>('')
+    const [url,setUrl] = useState<any>(null)
     const router = useRouter()
 
     const [success,setSuccess] = useState<string>('')

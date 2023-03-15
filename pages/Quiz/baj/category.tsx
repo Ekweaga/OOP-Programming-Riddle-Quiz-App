@@ -25,9 +25,9 @@ function Category() {
       imageUrl:string
   }
 
-  const getUserInfo = async()=>{
+  const getUserInfo = ()=>{
     try{
-await onSnapshot(doc(projectfirestore, "User", `${user?.email}`), (doc) => {
+ onSnapshot(doc(projectfirestore, "singleUser", `${user?.email}`), (doc) => {
     
   
       setUserInfo(doc.data()?.saveUserInfo)
@@ -63,7 +63,7 @@ await onSnapshot(doc(projectfirestore, "User", `${user?.email}`), (doc) => {
     },[user])
 
     if(!user){
-      router.push("/views/Login")
+      router.push("views/Login")
       return;
     }
   return (
@@ -74,7 +74,7 @@ await onSnapshot(doc(projectfirestore, "User", `${user?.email}`), (doc) => {
      
        
               <div>
-                <Image src={userInfo?.imageUrl} width={30} height={30} className="rounded-full" alt="UserImage"/>
+                <img src={userInfo?.imageUrl} width={30} height={30} className="rounded-full" alt="UserImage"/>
                 <h1>{userInfo?.name}</h1>
 
               </div>
